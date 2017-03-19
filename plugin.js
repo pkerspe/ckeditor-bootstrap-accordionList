@@ -1,6 +1,6 @@
 CKEDITOR.plugins.add('accordionList', {
     requires: 'widget,collapsibleItem',
-    icons: 'accordionList',
+    icons: 'accordionlist',
     init: function (editor) {
         editor.widgets.add('accordionList', {
             button: 'Insert a new Accordion List',
@@ -30,12 +30,12 @@ CKEDITOR.plugins.add('accordionList', {
                 editorForElement.setActiveEnterMode(CKEDITOR.ENTER_BR, CKEDITOR.ENTER_BR);
 
                 //prevent entering any data via keyboard, since we only want nested widgets in here
-                $(editable.$).on('keydown', function (event) {
-                    if(event.target.id.indexOf(idPrefix) == 0){
-                        return false;
+                editable.on('keydown', function (event) {
+                    console.log("down",event);
+                    if(event.data.$.target.id.indexOf(idPrefix) == 0){
+                        event.data.$.preventDefault();
+                        event.data.$.stopPropagation();
                     }
-                    //allow keystrokes for all nested elements (widgets)
-                    return event;
                 });
             },
             data: function () {
