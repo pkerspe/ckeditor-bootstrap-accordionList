@@ -1,6 +1,6 @@
 CKEDITOR.plugins.add('accordionList', {
     requires: 'widget,collapsibleItem',
-    icons: 'accordionlist',
+    icons: 'accordionList',
     hidpi: true,
     init: function (editor) {
         editor.widgets.add('accordionList', {
