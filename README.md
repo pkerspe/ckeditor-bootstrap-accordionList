@@ -8,7 +8,3 @@ Requires the following ckeditor Plugins:
  
 This plugin will add a new widget to allow you to create an accordion list in ckeditor without the need to work in source-code view.
 Allows drag and drop rearrangement of collapsible items in one group.
-
-# Version history:  
-
-- __V 0.1__: First version with basic functionality
